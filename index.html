@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Combate - Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ Sistema de Combate ⚔️</h1>
+
+        <div class="personagens" id="personagens-container">
+            <!-- Os personagens serão inseridos aqui pelo JavaScript -->
+        </div>
+
+        <div class="controles">
+            <h2> Controles de Combate</h2>
+            <div class="botoes">
+                <select id="atacante">
+                    <option value="0">Warrior</option>
+                    <option value="1">Mage</option>
+                    <option value="2">Hunter</option>
+                    <option value="3">Undead</option>
+                </select>
+                
+                <select id="alvo">
+                    <option value="0">Warrior</option>
+                    <option value="1">Mage</option>
+                    <option value="2">Hunter</option>
+                    <option value="3">Undead</option>
+                </select>
+
+                <button class="btn-atacar" onclick="executarAtaque()">⚔️ Atacar</button>
+                <button class="btn-escudo" onclick="toggleEscudoPersonagem()">🛡️ Toggle Escudo</button>
+                <button class="btn-curar" onclick="curarPersonagem()">💚 Curar (30 HP)</button>
+                <button class="btn-reset" onclick="resetarJogo()">🔄 Resetar Jogo</button>
+            </div>
+        </div>
+
+        <div class="log" id="log-container">
+            <h2> Log de Combate</h2>
+            <div id="log-content">
+                <p>Aguardando ações...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="dano.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
