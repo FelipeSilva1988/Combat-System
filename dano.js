@@ -10,8 +10,6 @@ class Personagem {
     this.possuiEscudo = possuiEscudo;
     this.vivo = true;
   }
-
-  // Método para atacar outro personagem
   atacar(alvo) {
     if (!this.vivo) {
       console.log(`${this.nome} está morto e não pode atacar!`);
@@ -31,8 +29,6 @@ class Personagem {
 
     return dano;
   }
-
-  // Calcula o dano considerando defesa e escudo
   calcularDano(alvo) {
     let danoBase = this.poderAtaque;
     
