@@ -7,8 +7,6 @@ let personagens = [
 ];
 
 let logMessages = [];
-
-// Sobrescrever console.log para capturar mensagens
 const originalLog = console.log;
 console.log = function(...args) {
     originalLog.apply(console, args);
@@ -96,7 +94,7 @@ function resetarJogo() {
         new Personagem('Arqueiro', 60, 150, 30, false),
         new Personagem('Morto Vivo', 45, 180, 35, true)
     ];
-    logMessages = ['Jogo resetado!'];
+    logMessages = ['Game reseted!'];
     renderizarPersonagens();
     atualizarLog();
 }
@@ -108,8 +106,6 @@ function atualizarLog() {
     ).join('');
     logContent.scrollTop = logContent.scrollHeight;
 }
-
-// Inicializar quando a página carregar
 window.addEventListener('DOMContentLoaded', () => {
     renderizarPersonagens();
 });

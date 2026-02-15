@@ -77,11 +77,11 @@ class Personagem {
 
   exibirStatus() {
     console.log(`\n📊 Status de ${this.nome}:`);
-    console.log(`   ⚔️  Ataque: ${this.poderAtaque}`);
-    console.log(`   ❤️  Vida: ${this.pontosVida}/${this.vidaMaxima}`);
-    console.log(`   🛡️  Defesa: ${this.poderDefesa}`);
-    console.log(`   🛡️  Escudo: ${this.possuiEscudo ? 'Sim' : 'Não'}`);
-    console.log(`   Status: ${this.vivo ? 'Vivo' : 'Morto'}`);
+    console.log(`   ⚔️  Attack : ${this.poderAtaque}`);
+    console.log(`   ❤️  Health: ${this.pontosVida}/${this.vidaMaxima}`);
+    console.log(`   🛡️  Defense: ${this.poderDefesa}`);
+    console.log(`   🛡️  Shield: ${this.possuiEscudo ? 'Sim' : 'Não'}`);
+    console.log(`   Status: ${this.vivo ? 'Alive' : 'Dead'}`);
   }
 }
 
@@ -89,10 +89,10 @@ console.log('='.repeat(50));
 console.log('🎮  SISTEMA DE COMBATE - DEMONSTRAÇÃO');
 console.log('='.repeat(50));
 
-const guerreiro = new Personagem('Guerreiro', 50, 200, 40, true);
-const mago = new Personagem('Mago', 80, 120, 20, false);
-const arqueiro = new Personagem('Arqueiro', 60, 150, 30, false);
-const mortoVivo = new Personagem('MortoVivo', 50, 300, 30, true);
+const guerreiro = new Personagem('Warrior', 50, 200, 40, true);
+const mago = new Personagem('Mage', 80, 120, 20, false);
+const arqueiro = new Personagem('Hunter', 60, 150, 30, false);
+const mortoVivo = new Personagem('Undead', 50, 300, 30, true);
 
 guerreiro.exibirStatus();
 mago.exibirStatus();
@@ -104,7 +104,7 @@ console.log('='.repeat(50));
 
 mago.atacar(guerreiro);
 
-guerreiro.toggleEscudo(); // Desativa escudo
+guerreiro.toggleEscudo(); 
 guerreiro.atacar(mago);
 
 arqueiro.atacar(guerreiro);
@@ -113,7 +113,7 @@ mago.atacar(guerreiro);
 
 guerreiro.curar(30);
 
-guerreiro.toggleEscudo(); // Reativa escudo
+guerreiro.toggleEscudo(); 
 guerreiro.atacar(mago);
 
 arqueiro.atacar(mago);
